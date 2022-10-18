@@ -3,17 +3,93 @@
     <head>
         <meta charset = "utf-8">
         <title>PHHP.INDONESIA</title>
-        <meta name = "viewport" content="width=device-width, initial-scale=1">
+        <meta name = "viewport" content="width=device-width, initial-scale=1,0">
     
         <style>
+          * {
+            Max-width: 100%;
+
+          }
+          @media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
         body{
-            max-width: 100%;
-            background-image: linear-gradient(to bottom right, rgb(151, 253, 151), rgb(250, 250, 187), rgb(255, 230, 184)); 
+           
+            background-color: white; 
             margin: 0;
-              
+            
+        }
+        .bagiansatu1{
+          text-align: center;
+          background-image: linear-gradient(to bottom right, rgb(140, 255, 140), rgb(255, 255, 161), rgb(253, 208, 208)); 
+          border-radius: 10px;
+        }
+        .bagiansatu2{
+          text-align: center;
+          background-image: linear-gradient(to bottom right, rgb(236, 255, 249), rgb(186, 184, 255), rgb(182, 232, 255));
+          border-radius: 10px;
+          
+        }
+        .bagiandua{
+          text-align: center;
+          background-image: linear-gradient(to bottom right, rgb(236, 255, 249), rgb(186, 184, 255), rgb(182, 232, 255)); 
+          border-radius: 10px;
+        
+        }
+        .bagiantiga{
+          text-align: center;
+          background-image: linear-gradient(to bottom right, rgb(255, 224, 251), rgb(223, 184, 255), rgb(255, 182, 222));
+          border-radius: 10px;
+        
+        }
+        .bagianempat{
+          text-align: center;
+          background-color:rgb(255, 255, 255);
+          border-radius: 10px;
+        
+        }
+        .bagianlima{
+          text-align: center;
+          background-color:rgb(199, 138, 184);
+          border-radius: 10px;
+          
+        }
+        .bagianenam{
+          text-align: center;
+          background-color:rgb(255, 255, 255);
+          border-radius: 10px;
+          
+        
+        }
+        .bagianterakhir{
+          width: 90%;
+          text-align: center;
+          background-color: rgb(92, 92, 92);
+          border-radius: 1px;
+          color: aliceblue;
+          
+          
         }
         img{
+          width: "90%";
+          text-align: center;
             border-radius: 10px;
+        }
+        .galeri1{
+          margin: 5%;
         }
         table {
             background-image: black;
@@ -22,19 +98,15 @@
             margin-top: 5%;
             
             padding: 0; 
-            
+            width : "auto";
+             float:"none"; 
           
         }
         source{
             margin:0;
         }
-        td{
-            
-            border-radius: 10px;
-            background-image: linear-gradient(to bottom right, rgb(140, 255, 140), rgb(255, 255, 161), rgb(253, 208, 208)); 
-            margin-left: auto;
-            margin-right: auto;
-        }
+        
+        
         
         a{
             
@@ -44,8 +116,10 @@
         
         P{
             text-align: center;
-            
+            font-size: 120%;
+            font-family: 'Perpetua', Courier, monospace;
         }
+      
         .button {
   background-color: #58c25c; /* Green */
   border: none;
@@ -56,77 +130,76 @@
   display: inline-block;
   font-size: 30px;
 }
-        footer{
-          text-align: center;
-            background-color: rgb(95, 95, 95);
-            max-width: 100%;
-            height: 100px;
-            
-            
-        }
+        
         </style>
 
     </head>
         <body>
-            <table    width = "1100" height = "400"  >
+          <div style="">
+            <table  class="bagiansatu1"    ><!--bagian ke satu part1-->
           <tr>
               <td><img src = "Fiber logo.png" width="100%" height="500"></td>
           </tr>
             </table>
 
-            <table    width = "600" height = "600"  >
+
+            <table  class="bagiansatu2"    ><!--bagian ke satu part2-->
                 <tr>
-                    <td><img src = "http://phhp.co.id/images/infographic/phyto-fiber_1.jpg" max-width="100%" height="600"></td>
-                    
+                    <td><img src = "phyto-fiber_1.jpg" width="90%" height="600"></td> 
                 </tr>
-                
                   </table>
 
-                  
-
-          <table       width = "600" height = "600" >
-          <td align = "center"><h1>Keunggulan Phyto Fiber</h1>
-            <video controls     max-width = "100%" height = "550" >
+            
+          <table  class="bagiandua"      ><!--bagian ke dua-->
+          <td><h1>Keunggulan Phyto Fiber</h1>
+            <video controls     width = "90%" height = "600" >
             <source src="Keunggulan PHHP Phyto Fiber.mp4"  >
           </video></td>
           </table>
 
-          <table    width = "600" height = "600"  >
+
+          <table  class="bagiantiga"   ><!--bagian ke tiga-->
             <tr>
-                <td align = "center"><h1>Testimoni</h1><video controls   max-width = "100%" height = "550">
-                    <source src="" >
-                  </video></td>
+                <td ><h1>Testimoni</h1>
+                  <video controls   width = "90%" height = "600">
+                    <source src="Keunggulan PHHP Phyto Fiber.mp4" > </video></td>
             </tr>
               </table>
 
-              <table    width = "600" height = "600"  >
-                <tr>
-                    <td align = "center"><h1>Tahukah Kamu?</h1>
-                    <p>Bahwa banyak penyakit ringan hingga penyakit berbahaya berasal dari saluran pencernaan Anda? di jaman yang canggih dan serba instan ini:
 
-                      Hampir semua produk makanan yang Anda konsumsi kaya akan lemak dan sedikit nutrisi seperti fast food dan daging olahan.
-                      
-                      Bahan pangan seperti buah berasal dari kecepatan proses dengan pupuk kimia dan Pestisida.
-                      
-                      Bahkan hewan ternakpun menggunakan hormon. Dan bila Anda mengkonsumsi secara terus-menerus, menyebabkan metabolisme tubuh kita melambat, yang mengakibatkan penumpukan lemak & Obesitas (Kegemukan).</p></td>
+              <table class="bagianempat"   ><!--bagian ke empat-->
+                <tr>
+                    <td ><img src = "unnamed1.jpg" >
+                    <p>Bahwa banyak penyakit ringan hingga penyakit berbahaya <strong>berasal dari saluran pencernaan Anda?</strong><br>
+                      jaman yang canggih dan serba instan ini hampir semua produk makanan yang Anda konsumsi kaya akan lemak dan sedikit nutrisi<br>
+                      seperti fast food dan daging olahan.<br></p>
+
+                     <p> Bahan pangan seperti buah berasal dari kecepatan proses dengan pupuk kimia dan Pestisida.<br></p>
+                     <p>Bahkan hewan ternakpun menggunakan hormon.<br>
+                      Dan bila Anda mengkonsumsi secara terus-menerus, menyebabkan metabolisme tubuh kita melambat,<br>
+                      yang mengakibatkan penumpukan lemak & Obesitas (Kegemukan).</p></td>
                 </tr>
                   </table>
 
-                  <table    width = "600" height = "600"  >
+                  <table class="bagianlima"  ><!--bagian ke lima-->
                     <tr>
-                        <td align = "center"><h1>Foto Galeri</h1></td>
+                        <td  colspan="2"><h1>Foto Galeri</h1>
+                          <img class="galeri1" src="phyto-fiber_1.jpg"  width="40%"><img class="galeri1" src="phyto-fiber_4.jpg" width="40%">
+                          <img class="galeri1" src="phyto-fiber_5.jpg" width="40%"><img class="galeri1" src="phyto-fiber_6.jpg" width="40%"></td>
+                        
                     </tr>
+                    
                       </table>
                      
                           
                              
 
-                  <table    width = "600" height = "600"  >
+                  <table  class="bagianenam"    ><!--bagian ke enam-->
                     <tr>
-                        <td align = "center">
-                            <a href="http://phhp.co.id/products/phyto-fiber-lemon.php">
-                            <img src="http://phhp.co.id/images/products/phyto-fiber-lemon.png" ></a>
-                            <p>Klik tombol untuk memesan via PHHP Admin</p>
+                        <td>
+                            
+                            <img src="phyto-fiber-lemon.png" >
+                            <h3>Klik tombol untuk memesan via PHHP Admin</h3>
                             <a href="http://phhp.co.id/products/phyto-fiber-lemon.php" class="button">
                                 <img src="https://freepngimg.com/download/whatsapp/77099-whats-icons-text-symbol-computer-messaging-whatsapp.png" width="30" height="30" >Pesan Sekarang</a>
                         </td>
@@ -134,18 +207,18 @@
                       </table>
 
           
-              <footer >
-              <h4>2022 PHHP FIBER</h4>
-               <a href="http://phhp.co.id/products/phyto-fiber-lemon.php">
-                <img src="https://freepngimg.com/download/whatsapp/77099-whats-icons-text-symbol-computer-messaging-whatsapp.png" width="50" height="50" ></a>
-                <a href="http://phhp.co.id/products/phyto-fiber-lemon.php">
-                  <img src="https://clipground.com/images/imagem-png-transparente-1.png" width="50" height="50" ></a>
-                  <a href="http://phhp.co.id/products/phyto-fiber-lemon.php">
-                    <img src="https://1.bp.blogspot.com/-zPnHKpUdViY/X0OzA6pRnXI/AAAAAAAAAQM/LZQbELfm9BQK6nIkju-1t4KqMVxcPkRdQCLcBGAsYHQ/s1912/logo%2Byt%2Byogiancreative1.png" width="50" height="50" ></a>
-                      
-              
-              
-              </footer>
-          
+              <table class="bagianterakhir" width = "70%" height = "10"><footer><!--bagian terakhir-->
+                <td>
+              <h3>2022 PHHP FIBER</h3>
+              <a href="http://phhp.co.id/products/phyto-fiber-lemon.php">
+                <img src="https://freepngimg.com/download/whatsapp/77099-whats-icons-text-symbol-computer-messaging-whatsapp.png" width="20" height="30" ></a>
+              <a href="http://phhp.co.id/products/phyto-fiber-lemon.php">
+                <img src="https://clipground.com/images/imagem-png-transparente-1.png" width="20" height="30" ></a>
+              <a href="http://phhp.co.id/products/phyto-fiber-lemon.php">
+                <img src="https://1.bp.blogspot.com/-zPnHKpUdViY/X0OzA6pRnXI/AAAAAAAAAQM/LZQbELfm9BQK6nIkju-1t4KqMVxcPkRdQCLcBGAsYHQ/s1912/logo%2Byt%2Byogiancreative1.png" width="30" height="30" ></a>
+             </footer> 
+            </td>
+            </table>
+          </div>
         </body>
 </html>
