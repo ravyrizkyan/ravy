@@ -162,58 +162,20 @@
   width: 90%;
   display: grid;
   place-items: center;
-  overflow: hidden;
 }
 .content-slide {
     display: flex;
-    width: calc(15% * 6);
-    animation: scroll 6s linear infinite;
-}
-.content-slide:hover{
-  animation-play-state: paused;
-}
-@keyframes scroll {
-  0%{
-    transform: translateX(0);
-  }
-  100%{
-    transform: translateX(calc(-3% * 3 ));
-  }
+    width: calc(250px * 7);
 }
 .imgslide{
   height: 200px;
-  width: 250px;
+  width: 10%;
   display: flex;
   align-items: center;
   padding :15px;
-  perspective: 100%;
 }
 .gambarslidetesti{
-  height: auto;
   width: 100%;
-  transition: transform 1s;
-}
-.gambarslidetesti:hover{
-  transform: translateZ(10px);
-}
-/*Shadow*/
-.container::before,
-.container::after{
-  background: linear-gradient(to right, rgb(255, 255, 255,1)0%,rgb(255, 255, 255,0) 100%);
-  content: '';
-  height: 100%;
-  position: absolute;
-  width: 3%;
-  z-index: 2;
-}
-.container::before{
-  left: 0;
-  top: 0;
-}
-.container::after{
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
 }
         
         </style>
@@ -260,25 +222,23 @@
                     <div class="container">
                       <div class="content-slide">
                           <div class="imgslide">
-                              <img class="gambarslidetesti" src="test1.jpg" width="85%"alt="">
+                              <img class="gambarslidetesti" src="test1.jpg" alt="">
                           </div>
                           <div class="imgslide">
-                              <img class="gambarslidetesti" src="test2.jpg" width="85%"alt="">
+                              <img class="gambarslidetesti" src="test2.jpg" alt="">
                           </div>
                           <div class="imgslide">
-                              <img class="gambarslidetesti" src="test3.jpg" width="85%"alt="">
+                              <img class="gambarslidetesti" src="test3.jpg" alt="">
                           </div>
                           <div class="imgslide"> 
-                              <img class="gambarslidetesti" src="test4.jpg" width="85%"alt="">
+                              <img class="gambarslidetesti" src="test4.jpg" alt="">
                           </div>
                           <div class="imgslide">
-                              <img class="gambarslidetesti" src="twopeole.jpg" width="85%"alt="">
+                              <img class="gambarslidetesti" src="twopeole.jpg" alt="">
                           </div>
                           <div class="imgslide">
-                              <img class="gambarslidetesti" src="onepeople.jpg" width="85%"alt="">
-                          </div>  
-                          
-                          
+                              <img class="gambarslidetesti" src="onepeople.jpg" alt="">
+                          </div>   
                       </div>
                   </div>
                   </td>
@@ -351,8 +311,8 @@
                 <img src="https://clipground.com/images/imagem-png-transparente-1.png" width="20" height="30" >Instagram</a>
               <a href="http://phhp.co.id/products/phyto-fiber-lemon.php">
                 <img src="https://1.bp.blogspot.com/-zPnHKpUdViY/X0OzA6pRnXI/AAAAAAAAAQM/LZQbELfm9BQK6nIkju-1t4KqMVxcPkRdQCLcBGAsYHQ/s1912/logo%2Byt%2Byogiancreative1.png" width="30" height="30" >Youtube</a>
-             </td> </footer> 
-           
+             </footer> 
+            </td>
             </table>
           </div>
         </body>
