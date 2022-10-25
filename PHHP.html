@@ -143,7 +143,7 @@
         }
       
         .button {
-          border-radius: 50%;
+          border-radius: 10px;
   background-color: #58c25c; /* Green */
   border: none;
   color: white;
@@ -152,6 +152,67 @@
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
+}
+/* Slideshow container */
+
+.container{
+  height: 50%;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.content-slide {
+    display: flex;
+    width: calc(15% * 6);
+    animation: scroll 6s linear infinite;
+}
+.content-slide:hover{
+  animation-play-state: paused;
+}
+@keyframes scroll {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-3% * 3 ));
+  }
+}
+.imgslide{
+  height: 500px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding :15px;
+  perspective: 100px;
+}
+.gambarslidetesti{
+  width: 100%;
+  transition: transform 1s;
+}
+.gambarslidetesti:hover{
+  transform: translateZ(10px);
+}
+/*Shadow*/
+.container::before,
+.container::after{
+  background: linear-gradient(to right, rgb(255, 255, 255,1)0%,rgb(255, 255, 255,0) 100%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 3%;
+  z-index: 2;
+}
+.container::before{
+  left: 0;
+  top: 0;
+}
+.container::after{
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
 }
         
         </style>
@@ -182,7 +243,7 @@
             <source src="Keunggulan PHHP Phyto Fiber.mp4"  >
           </video>
           <video controls     width = "100%" height = "auto" >
-            <source src="Keunggulan PHHP Phyto Fiber.mp4"  >
+            <source src="Psylium Husk Phyto fiber.mp4"  >
           </video></td>
           </table>
 <div class="logotesti">
@@ -191,9 +252,35 @@
           <table  class="bagiantiga" width="85%" height="auto"  ><!--bagian ke tiga-->
             <tr>
                 <td >
-                  
+                 
                   <video controls   width = "100%" height = "auto">
-                    <source src="Keunggulan PHHP Phyto Fiber.mp4" > </video></td>
+                    <source src="Keunggulan PHHP Phyto Fiber.mp4" > </video> 
+                    
+                    <div class="container">
+                      <div class="content-slide">
+                          <div class="imgslide">
+                              <img class="gambarslidetesti" src="test1.jpg" alt="">
+                          </div>
+                          <div class="imgslide">
+                              <img class="gambarslidetesti" src="test2.jpg" alt="">
+                          </div>
+                          <div class="imgslide">
+                              <img class="gambarslidetesti" src="test3.jpg" alt="">
+                          </div>
+                          <div class="imgslide"> 
+                              <img class="gambarslidetesti" src="test4.jpg" alt="">
+                          </div>
+                          <div class="imgslide">
+                              <img class="gambarslidetesti" src="twopeole.jpg" alt="">
+                          </div>
+                          <div class="imgslide">
+                              <img class="gambarslidetesti" src="onepeople.jpg" alt="">
+                          </div>  
+                          
+                          
+                      </div>
+                  </div>
+                  </td>
             </tr>
               </table>
 
@@ -256,15 +343,15 @@
                 <td>
               <h4>2022 PHHP Phyto Fiber</h4>
               <a href="http://phhp.co.id/products/phyto-fiber-lemon.php">
-                <img src="https://logodix.com/logo/14686.png" width="20" height="30" ></a>
+                <img src="https://logodix.com/logo/14686.png" width="20" height="30" >Facebook</a>
               <a href="http://phhp.co.id/products/phyto-fiber-lemon.php">
-                <img src="https://logodix.com/logo/2205501.png" width="20" height="30" ></a>
+                <img src="https://logodix.com/logo/2205501.png" width="20" height="30" >Tiktok</a>
               <a href="http://phhp.co.id/products/phyto-fiber-lemon.php">
-                <img src="https://clipground.com/images/imagem-png-transparente-1.png" width="20" height="30" ></a>
+                <img src="https://clipground.com/images/imagem-png-transparente-1.png" width="20" height="30" >Instagram</a>
               <a href="http://phhp.co.id/products/phyto-fiber-lemon.php">
-                <img src="https://1.bp.blogspot.com/-zPnHKpUdViY/X0OzA6pRnXI/AAAAAAAAAQM/LZQbELfm9BQK6nIkju-1t4KqMVxcPkRdQCLcBGAsYHQ/s1912/logo%2Byt%2Byogiancreative1.png" width="30" height="30" ></a>
-             </footer> 
-            </td>
+                <img src="https://1.bp.blogspot.com/-zPnHKpUdViY/X0OzA6pRnXI/AAAAAAAAAQM/LZQbELfm9BQK6nIkju-1t4KqMVxcPkRdQCLcBGAsYHQ/s1912/logo%2Byt%2Byogiancreative1.png" width="30" height="30" >Youtube</a>
+             </td> </footer> 
+           
             </table>
           </div>
         </body>
