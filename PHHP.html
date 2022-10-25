@@ -160,50 +160,88 @@
   font-size: 20px;
 }
 /* Slideshow container */
-
-.container{
-  height: 300px;
-  margin: auto;
-  position: relative;
-  width: 30%;
-  display: grid;
-  place-items: center;
-}
-.content-slide {
-    display: flex;
-    width: 30;
-}
-/*dibawah ini untuk bagian slidenya , tepatnya bagian dalamnya*/
-.imgslide{
-  height: 300px;
-  width: 100px;
-  display: flex;
-  align-items: center;
-  padding :5px;
-}
-.gambarslidetesti{
+.container {
   
-  height: 80%;
-  width: 100%;
+    padding: 100px 0 0 0;
 }
-/*Shadow*/
-.container::before,
-.container::after{
-  background: #58c25c;
-  content: '';
-  height: 100%;
-  position: absolute;
-  width: 15%;
-  z-index: 2;
+
+/* Slideshow container */
+.content-slide {
+    max-width: 50%;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    
 }
-.container::before{
-  left: 0;
-  top: 0;
+
+.imgslide {
+    display: none;
+    
 }
-.container::after{
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
+
+img {
+    vertical-align: middle;
+    height: 500px;
+}
+
+.prev,
+.next {
+    opacity: 10;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.pre:hover,
+.next:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.content-slide .numberslide {
+    color: #ffffff;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.page {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.page .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: rgb(187, 187, 187);
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    border-radius: 50%;
+}
+
+.page .active,
+.page .dot:hover {
+    background-color: #ce0000;
 }
         </style>
 
@@ -247,39 +285,106 @@
                     <source src="Keunggulan PHHP Phyto Fiber.mp4" > </video> 
                     
                     
-                  </td>
+                  
+
+              
+              
+                 
+          <div class="container" >
+                        <div class="content-slide">
+                            <div class="imgslide">                               
+                                <img class= "img" src="test1.jpg" alt="">             
+                            </div>
+                
+                            <div class="imgslide">                               
+                                <img class= "img" src="test2.jpg" alt="">                               
+                            </div>
+                
+                            <div class="imgslide">                                
+                                <img class= "img" src="test3.jpg" alt="">                                
+                            </div>
+
+                            <div class="imgslide">                             
+                                <img class= "img" src="test4.jpg" alt="">                             
+                            </div>
+
+                            <div class="imgslide">                               
+                                <img class= "img" src="twopeole.jpg" alt="">                               
+                            </div>
+
+                            <div class="imgslide">                                
+                                <img class= "img" src="onepeople.jpg" alt="">                                
+                            </div>
+                
+                            <a class="prev" onClick="nextslide(-1)">&#10094;</a>
+                            <a class="next" onClick="nextslide(1)">&#10095;</a> 
+                        </div>
+                
+                        <div class="page">
+                            <span class="dot" onClick="dotslide(1)"></span>
+                            <span class="dot" onClick="dotslide(2)"></span>
+                            <span class="dot" onClick="dotslide(3)"></span>
+                            <span class="dot" onClick="dotslide(4)"></span>
+                            <span class="dot" onClick="dotslide(5)"></span>
+                            <span class="dot" onClick="dotslide(6)"></span>
+                        </div>
+                </div>
+                <script>
+                  var slideIndex = 1;
+                      showSlide(slideIndex);
+          
+                  function nextslide(n){
+                      showSlide(slideIndex += n);
+                  }
+          
+                  function dotslide(n){
+                      showSlide(slideIndex = n);
+                  }
+          
+                  function showSlide(n) {
+                      var i;
+                      var slides = document.getElementsByClassName("imgslide");
+                      var dot = document.getElementsByClassName("dot");
+                      
+                      if (n > slides.length) {
+                          slideIndex = 1
+                      }
+                      if (n < 1) {
+                          slideIndex = slides.length;
+                      }
+                      for (i = 0; i < slides.length; i++) {
+                          
+                          slides[i].style.display = "none";
+                      }
+          
+                      for (i = 0; i < slides.length; i++) {
+                          
+                          dot[i].className = dot[i].className.replace(" active", "");
+                      }
+          
+                      slides[slideIndex - 1].style.display = "block";
+          
+                      dot[slideIndex - 1].className += " active";
+                      
+                      $('.responsive').slick({
+                          dots: true,
+                          infinite: true,
+                          speed: 300,
+                          slidesToShow: 3,
+                          slideToScroll: 1,
+                          autoplay: true,
+                          autoplaySpeed: 500,
+                      });
+          
+          
+                  }
+              </script>
+                
+                 
+          </td>
             </tr>
               </table>
-
-              <table  class="bagiantiga2" width="85%" height="auto"  ><!--bagian ke tiga-->
               
-                    <td >
-                      <div class="container">
-                      <div class="content-slide">
-                          <div class="imgslide">
-                              <img class="gambarslidetesti" src="test1.jpg" alt="">
-                          </div>
-                          <div class="imgslide">
-                            <img class="gambarslidetesti" src="test2.jpg" alt="">
-                        </div>
-                        <div class="imgslide">
-                          <img class="gambarslidetesti" src="test3.jpg" alt="">
-                      </div>
-                      <div class="imgslide">
-                        <img class="gambarslidetesti" src="test4.jpg" alt="">
-                    </div>
-                    <div class="imgslide">
-                      <img class="gambarslidetesti" src="onepeople.jpg" alt="">
-                  </div>
-                  <div class="imgslide">
-                    <img class="gambarslidetesti" src="twopeole.jpg" alt="">
-                </div>
-                           
-                      </div>
-                  </div>
-                  </td>
-          
-              </table>
 
 
               <table class="bagianempat" width="85%" height="auto"   ><!--bagian ke empat-->
