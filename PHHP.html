@@ -93,13 +93,13 @@
           
           
         }
-        .img{
+        /*.img{
           height: 300px;
           width: auto;
           text-align: center;
             border-radius: 10px;
             margin: 2;
-        }
+        }*/
         .galeri1{
           max-width : "60%";
           height : "auto";
@@ -161,11 +161,11 @@
   font-size: 20px;
 }
 .slider {
-  
+  text-align: center;
   overflow: hidden;
   height: 400px;
   width: 100%;
-  
+  background-color: #58c25c;
   margin-left: 1px;
   margin-top: 2px;
 }
@@ -181,7 +181,8 @@
   
 }
 .slide-track{
-  place-items: center;
+  background-color: black;
+  text-align: center;
   width: 100%;
   height: 300px;
   margin:0 0 0 10px;
@@ -193,9 +194,9 @@
   -webkit-animation-play-state: running;
 }
 .slide{
-  place-items: center;
+  text-align: center;
   height: 300px;
-  width: 220px;
+  width: 300px;
   position: relative;
   float: left;
   background-color: blue; 
@@ -241,45 +242,28 @@
                  
                   <video controls   width = "100%" height = "auto">
                     <source src="Keunggulan PHHP Phyto Fiber.mp4" > </video> 
-                    
+                    <img class="galeri1" src="onepeople.jpg width="85%"><img class="galeri1" src="test1.jpg" width="85%">
+                          <img class="galeri1" src="test2.jpg" width="85%"><img class="galeri1" src="test3.jpg" width="85%">
+                          <img class="galeri1" src="test4.jpg" width="85%"><img class="galeri1" src="twopeole.jpg" width="85%">
                     
                   
 
               
               
                  
-          <div class="slider">
-                        <div class="slide-track">
-                           <div class="slide">                                
-                            <img src="onepeople.jpg" alt="">
-                            </div>
-                            <div class="slide">                               
-                            <img src="test1.jpg" alt="">                
-                            </div>
-                
-                            <div class="slide">                               
-                            <img src="test2.jpg" alt="">              
-                            </div>
-                
-                            <div class="slide">                                
-                            <img src="test3.jpg" alt="">              
-                            </div>
-
-                            <div class="slide">                             
-                            <img src="test4.jpg" alt="">
-                            </div>
-
-                            <div class="slide">                               
-                            <img src="twopeole.jpg" alt="">
-                            </div>
+          <!---<div class="slider">
+                        <div class="slide-track">  
+                           <div class="slide">    --->                          
+                            
+                           
 
                             
                 
                            
-                        </div>
+                      
                 
                         
-                </div>
+                
                 <script>
  /*                 
 $('.responsive').slick({
