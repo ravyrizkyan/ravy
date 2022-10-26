@@ -161,30 +161,45 @@
   font-size: 20px;
 }
 .slider {
-  height: 300px;
-  background-color: #58c25c;
-  margin :auto;
-  position: relative;
-  width: 100%;
-  display :grid;
-  place-items: center;
+  
   overflow: hidden;
+  height: 400px;
+  width: 100%;
+  
+  margin-left: 1px;
+  margin-top: 2px;
+}
+
+@-webkit-keyframes slide_animation{
+ 
+  0%{right:  0px;}
+  20%{right: 10px;}
+  40%{right: 20px;}
+  60%{right: 20px;}
+  80%{right: 10px;}
+  100%{right: 0px;}
+  
 }
 .slide-track{
-  text-align: center;
+  place-items: center;
   width: 100%;
-  background-color: aqua;
-  display :flex;
-  
-  width: (400px * 6);
+  height: 300px;
+  margin:0 0 0 10px;
+  position: relative; 
+  -webkit-animation-name: slide_animation;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
 }
 .slide{
+  place-items: center;
   height: 300px;
-  background-color: blue;
-  width: 100%;
-  display: flex;
-  text-align: center;
-  
+  width: 220px;
+  position: relative;
+  float: left;
+  background-color: blue; 
+  margin-left: 9px; 
 }
         </style>
 
@@ -235,29 +250,30 @@
                  
           <div class="slider">
                         <div class="slide-track">
+                           <div class="slide">                                
+                            <img src="onepeople.jpg" alt="">
+                            </div>
                             <div class="slide">                               
-                                <img class= "img" src="test1.jpg" alt="">                
+                            <img src="test1.jpg" alt="">                
                             </div>
                 
                             <div class="slide">                               
-                                                 <img class= "img" src="test2.jpg" alt="">              
+                            <img src="test2.jpg" alt="">              
                             </div>
                 
                             <div class="slide">                                
-                                                  <img class= "img" src="test3.jpg" alt="">              
+                            <img src="test3.jpg" alt="">              
                             </div>
 
                             <div class="slide">                             
-                                                             <img class= "img" src="test4.jpg" alt="">
+                            <img src="test4.jpg" alt="">
                             </div>
 
                             <div class="slide">                               
-                                                               <img class= "img" src="twopeole.jpg" alt="">
+                            <img src="twopeole.jpg" alt="">
                             </div>
 
-                            <div class="slide">                                
-                                                                <img class= "img" src="onepeople.jpg" alt="">
-                            </div>
+                            
                 
                            
                         </div>
@@ -274,14 +290,14 @@ $('.responsive').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
-});*/
-$('.one-time').slick({
+});
+$('.one-time').scroll({
   dots: true,
   infinite: true,
   speed: 300,
   slidesToShow: 1,
   adaptiveHeight: true
-});
+});*/
                  
               </script>
                 
